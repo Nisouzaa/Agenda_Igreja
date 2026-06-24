@@ -119,7 +119,7 @@ export default function Sidebar() {
                     title={sidebarCollapsed ? label : undefined}
                     className={`nav-item ${currentPage === id ? "active" : ""} ${sidebarCollapsed ? "justify-center px-0" : ""}`}
                   >
-                    <Icon className="text-[17px] flex-shrink-0" />
+                    <Icon className="text-[20px] flex-shrink-0" />
                     <AnimatePresence>
                       {!sidebarCollapsed && (
                         <motion.span
@@ -213,7 +213,7 @@ export default function Sidebar() {
                 className="text-left overflow-hidden"
               >
                 <p className="text-xs font-medium text-gray-800 dark:text-gray-100 truncate leading-tight">
-                  lest[at]
+                  <span>[name]</span>
                 </p>
                 <p className="text-[10px] text-gray-400 truncate">
                   Administrador

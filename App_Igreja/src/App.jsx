@@ -11,7 +11,7 @@ import Dashboard from "@/pages/Dashboard";
 import Calendar from "@/pages/Calendar";
 import Cultos from "@/pages/Cultos";
 import Salas from "@/pages/Salas";
-import Aconselhamento from "@/pages/Aconselhamentos";
+import Aconselhamento from "@/pages/Aconselhamento";
 import Voluntarios from "@/pages/Voluntarios";
 import Membros from "@/pages/Membros";
 

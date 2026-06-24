@@ -28,12 +28,60 @@ export const useStore = create((set, get) => ({
   counseling: [],
   members: [],
   rooms: [
-    { id: 1, name: "Sala Principal", capacity: 300, type: "Igreja",        status: "available", until: null, color: "#7C3AED" },
-    { id: 2, name: "Sala 2",         capacity: 80,  type: "Reuniões",      status: "available", until: null, color: "#0891B2" },
-    { id: 3, name: "Auditório",      capacity: 200, type: "Eventos",       status: "available", until: null, color: "#059669" },
-    { id: 4, name: "Sala de Oração", capacity: 50,  type: "Oração",        status: "available", until: null, color: "#D97706" },
-    { id: 5, name: "Sala Infantil",  capacity: 50,  type: "Escola Bíblica",status: "available", until: null, color: "#E11D48" },
-    { id: 6, name: "Sala de Mídia",  capacity: 10,  type: "Produção",      status: "available", until: null, color: "#6366F1" },
+    {
+      id: 1,
+      name: "Sala Principal",
+      capacity: 300,
+      type: "Igreja",
+      status: "available",
+      until: null,
+      color: "#7C3AED",
+    },
+    {
+      id: 2,
+      name: "Sala 2",
+      capacity: 80,
+      type: "Reuniões",
+      status: "available",
+      until: null,
+      color: "#0891B2",
+    },
+    {
+      id: 3,
+      name: "Auditório",
+      capacity: 200,
+      type: "Eventos",
+      status: "available",
+      until: null,
+      color: "#059669",
+    },
+    {
+      id: 4,
+      name: "Sala de Oração",
+      capacity: 50,
+      type: "Oração",
+      status: "available",
+      until: null,
+      color: "#D97706",
+    },
+    {
+      id: 5,
+      name: "Sala Infantil",
+      capacity: 50,
+      type: "Escola Bíblica",
+      status: "available",
+      until: null,
+      color: "#E11D48",
+    },
+    {
+      id: 6,
+      name: "Sala de Mídia",
+      capacity: 10,
+      type: "Produção",
+      status: "available",
+      until: null,
+      color: "#6366F1",
+    },
   ],
 
   // UI actions
@@ -131,8 +179,7 @@ export const useStore = create((set, get) => ({
     return get()
       .events.filter((e) => e.date >= todayStr)
       .sort(
-        (a, b) =>
-          a.date.localeCompare(b.date) || a.time.localeCompare(b.time),
+        (a, b) => a.date.localeCompare(b.date) || a.time.localeCompare(b.time),
       )
       .slice(0, n);
   },

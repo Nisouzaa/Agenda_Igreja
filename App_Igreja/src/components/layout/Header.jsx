@@ -35,7 +35,8 @@ export default function Header() {
   const pendingCount = counseling.filter((c) => c.status === "pending").length;
 
   return (
-    <header className="flex items-center gap-3 px-5 h-[60px] bg-white dark:bg-gray-900 border-b border-gray-100 dark:border-gray-800 flex-shrink-0">
+    <header className="flex items-center gap-3
+     px-5 h-[60px] bg-white dark:bg-gray-900 border-b border-gray-100 dark:border-gray-800 flex-shrink-0">
       <div className="flex-1 min-w-0">
         <h1 className="text-sm font-semibold text-gray-900 dark:text-gray-100 truncate">
           {title}
