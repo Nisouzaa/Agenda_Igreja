@@ -23,7 +23,7 @@ import {
 } from "react-icons/ri";
 import Calendario from "@/components/calendar/Calendario";
 
-const TODAY = new Date(2026, 4, 25);
+const TODAY = new Date(2026, 6, 24);
 
 function MetricCard({
   label,
@@ -138,7 +138,7 @@ export default function Dashboard() {
 
   const upcoming = getUpcoming(5);
   const todayVols = volunteers
-    .filter((v) => v.date === "2026-05-25")
+    .filter((v) => v.date === "2026-07-24")
     .slice(0, 4);
   const pendingCount = counseling.filter((c) => c.status === "pending").length;
 

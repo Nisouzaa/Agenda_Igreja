@@ -16,18 +16,18 @@ import Voluntarios from "@/pages/Voluntarios";
 import Membros from "@/pages/Membros";
 
 const PAGES = {
-  dashboard: <Dashboard />,
-  calendar: <Calendar />,
-  cultos: <Cultos />,
-  salas: <Salas />,
-  aconselhamentos: <Aconselhamento />,
-  voluntarios: <Voluntarios />,
-  membros: <Membros />,
+  dashboard: Dashboard,
+  calendar: Calendar,
+  cultos: Cultos,
+  salas: Salas,
+  aconselhamentos: Aconselhamento,
+  voluntarios: Voluntarios,
+  membros: Membros,
 };
 
 function App() {
   const { currentPage, darkMode } = useStore();
-  const PageComponent = PAGES[currentPage] || <Dashboard />;
+  const PageComponent = PAGES[currentPage] || Dashboard;
 
   // Aplica o tema escuro ao body quando darkMode é verdadeiro
   useEffect(() => {

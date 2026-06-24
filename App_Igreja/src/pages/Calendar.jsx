@@ -9,7 +9,7 @@ export default function Calendar() {
       transition={{ duration: 0.3 }}
       className="h-full"
     >
-      <Calendar compact={false} />
+      <Calendario compact={false} />
     </motion.div>
   );
 }

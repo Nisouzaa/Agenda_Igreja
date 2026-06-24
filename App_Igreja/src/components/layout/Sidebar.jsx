@@ -82,7 +82,7 @@ export default function Sidebar() {
               className="overflow-hidden"
             >
               <p className="text-sm font-semibold text-gray-900 dark:text-gray-100 whitespace-nowrap leading-tight">
-                Graça Viva
+                ASD - Igreja
               </p>
               <p className="text-[10px] text-gray-400 uppercase tracking-widest whitespace-nowrap">
                 Assembleia de Deus
