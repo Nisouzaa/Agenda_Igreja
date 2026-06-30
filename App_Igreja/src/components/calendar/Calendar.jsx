@@ -12,7 +12,11 @@ import {
 import { ptBR } from "date-fns/locale";
 import { useState } from "react";
 import { useStore } from "@/context/store";
-import { RiArrowLeftSLine, RiArrowRightSLine, RiDeleteBinLine } from "react-icons/ri";
+import {
+  RiArrowLeftSLine,
+  RiArrowRightSLine,
+  RiDeleteBinLine,
+} from "react-icons/ri";
 import { TYPE_BADGE, TYPE_LABEL } from "@/utils/helpers";
 
 const DAYS = ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sáb"];
@@ -47,9 +51,12 @@ const EVENT_COLORS = {
   retiro: "#6366F1",
 };
 
-export default function Calendario({ compact = false }) {
-  const { events, selectedDate, setSelectedDate, showToast, removeEvent } = useStore();
-  const [month, setMonth] = useState(new Date(TODAY.getFullYear(), TODAY.getMonth(), 1));
+export default function Calendar({ compact = false }) {
+  const { events, selectedDate, setSelectedDate, showToast, removeEvent } =
+    useStore();
+  const [month, setMonth] = useState(
+    new Date(TODAY.getFullYear(), TODAY.getMonth(), 1),
+  );
 
   const days = eachDayOfInterval({
     start: startOfMonth(month),
@@ -83,7 +90,9 @@ export default function Calendario({ compact = false }) {
               <RiArrowLeftSLine />
             </button>
             <button
-              onClick={() => setMonth(new Date(TODAY.getFullYear(), TODAY.getMonth(), 1))}
+              onClick={() =>
+                setMonth(new Date(TODAY.getFullYear(), TODAY.getMonth(), 1))
+              }
               className="px-2 h-7 text-xs text-gray-400 hover:bg-cream-100 dark:hover:bg-gray-800 rounded-lg transition-colors"
             >
               Hoje
@@ -101,13 +110,16 @@ export default function Calendario({ compact = false }) {
         {!compact && (
           <div className="flex items-center gap-3 mb-3 flex-wrap">
             <span className="flex items-center gap-1 text-[10px] text-gray-400">
-              <span className="w-2 h-2 rounded-full bg-serenity-400 inline-block" /> Hoje
+              <span className="w-2 h-2 rounded-full bg-serenity-400 inline-block" />{" "}
+              Hoje
             </span>
             <span className="flex items-center gap-1 text-[10px] text-gray-400">
-              <span className="w-2 h-2 rounded-full bg-red-300 inline-block" /> Feriado
+              <span className="w-2 h-2 rounded-full bg-red-300 inline-block" />{" "}
+              Feriado
             </span>
             <span className="flex items-center gap-1 text-[10px] text-gray-400">
-              <span className="w-2 h-2 rounded-full bg-violet-400 inline-block" /> Evento
+              <span className="w-2 h-2 rounded-full bg-violet-400 inline-block" />{" "}
+              Evento
             </span>
           </div>
         )}
@@ -155,7 +167,9 @@ export default function Calendario({ compact = false }) {
                           : "text-gray-600 dark:text-gray-400 hover:bg-cream-100 dark:hover:bg-gray-800",
                 ].join(" ")}
               >
-                <span className="text-xs leading-none font-medium">{format(day, "d")}</span>
+                <span className="text-xs leading-none font-medium">
+                  {format(day, "d")}
+                </span>
                 {/* Pontos de eventos */}
                 {evs.length > 0 && (
                   <div className="flex gap-0.5 mt-0.5 flex-wrap justify-center">
@@ -203,7 +217,9 @@ export default function Calendario({ compact = false }) {
             {selectedEvents.length === 0 ? (
               <div className="card p-6 text-center">
                 <p className="text-sm text-gray-400">
-                  {selectedHoliday ? "Feriado — nenhum evento agendado." : "Nenhum evento neste dia."}
+                  {selectedHoliday
+                    ? "Feriado — nenhum evento agendado."
+                    : "Nenhum evento neste dia."}
                 </p>
               </div>
             ) : (
@@ -217,7 +233,9 @@ export default function Calendario({ compact = false }) {
                   <div className="flex gap-3">
                     <div
                       className="w-0.5 self-stretch rounded-full flex-shrink-0"
-                      style={{ backgroundColor: EVENT_COLORS[ev.type] || ev.color }}
+                      style={{
+                        backgroundColor: EVENT_COLORS[ev.type] || ev.color,
+                      }}
                     />
                     <div className="flex-1 min-w-0">
                       <p className="text-sm font-medium text-gray-800 dark:text-gray-100 truncate">
@@ -228,7 +246,9 @@ export default function Calendario({ compact = false }) {
                       </p>
                       <p className="text-xs text-gray-400">{ev.room}</p>
                       <div className="flex gap-2 mt-2 items-center">
-                        <span className={`badge ${TYPE_BADGE[ev.type] || "badge-blue"}`}>
+                        <span
+                          className={`badge ${TYPE_BADGE[ev.type] || "badge-blue"}`}
+                        >
                           {TYPE_LABEL[ev.type]}
                         </span>
                         <span className="text-[10px] text-gray-400">

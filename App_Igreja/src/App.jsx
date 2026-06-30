@@ -8,8 +8,9 @@ import Toast from "@/components/Ui/Toast";
 import Modal from "@/components/Ui/Modal";
 
 import Dashboard from "@/pages/Dashboard";
-import Calendar from "@/pages/Calendar";
+import Calendar from "@/pages/Calendario";
 import Cultos from "@/pages/Cultos";
+import Eventos from "@/pages/Eventos";
 import Salas from "@/pages/Salas";
 import Aconselhamento from "@/pages/Aconselhamento";
 import Voluntarios from "@/pages/Voluntarios";
@@ -17,10 +18,11 @@ import Membros from "@/pages/Membros";
 
 const PAGES = {
   dashboard: Dashboard,
-  calendar: Calendar,
+  calendario: Calendar, 
   cultos: Cultos,
+  eventos: Eventos, 
   salas: Salas,
-  aconselhamentos: Aconselhamento,
+  aconselhamento: Aconselhamento, 
   voluntarios: Voluntarios,
   membros: Membros,
 };

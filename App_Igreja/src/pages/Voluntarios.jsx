@@ -55,7 +55,7 @@ export default function Voluntarios() {
           </h2>
           <button
             className="btn btn-primary text-xs py-1.5"
-            onClick={() => openModal("new-event")}
+            onClick={() => openModal("new-volunteer")} 
           >
             + Escalar
           </button>

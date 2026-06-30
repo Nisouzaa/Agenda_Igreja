@@ -1,7 +1,7 @@
+import Calendar from "@/components/calendar/Calendar";
 import { motion } from "framer-motion";
-import Calendario from "@/components/calendar/Calendario";
 
-export default function Calendar() {
+export default function Calendario() {
   return (
     <motion.div
       initial={{ opacity: 0, y: 10 }}

@@ -62,8 +62,8 @@ export default function Sidebar() {
 
   return (
     <motion.aside
-      animate={{ width: sidebarCollapsed ? 68 : 236 }}
-      transition={{ duration: 0.2, ease: "easeInOut" }}
+      animate={{ width: sidebarCollapsed ? 100 : 236 }}
+      transition={{ duration: 0.1, ease: "easeInOut" }}
       className="flex-shrink-0 bg-white dark:bg-gray-900 border-r border-gray-100 dark:border-gray-800 flex flex-col overflow-hidden z-20 relative"
     >
       {/* Brand */}
@@ -78,14 +78,14 @@ export default function Sidebar() {
               initial={{ opacity: 0, x: -6 }}
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -6 }}
-              transition={{ duration: 0.15 }}
+              transition={{ duration: 0.20 }}
               className="overflow-hidden"
             >
               <p className="text-sm font-semibold text-gray-900 dark:text-gray-100 whitespace-nowrap leading-tight">
                 ASD - Igreja
               </p>
-              <p className="text-[10px] text-gray-400 uppercase tracking-widest whitespace-nowrap">
-                Assembleia de Deus
+              <p className="text-[8.5px] text-gray-400 uppercase tracking-widest whitespace-nowrap">
+                Missão Galo Branco
               </p>
             </motion.div>
           )}

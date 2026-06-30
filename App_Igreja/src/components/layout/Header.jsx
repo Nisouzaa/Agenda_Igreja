@@ -53,7 +53,7 @@ export default function Header() {
         <RiSearchLine className="text-base" />
         <span className="text-sm text-gray-400 font-normal">Buscar…</span>
         <kbd className="text-[10px] bg-gray-100 dark:bg-gray-800 text-gray-400 rounded px-1.5 py-0.5 font-mono hidden md:inline">
-          ⌘K
+          ⌘
         </kbd>
       </button>
 

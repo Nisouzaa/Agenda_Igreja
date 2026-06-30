@@ -21,7 +21,7 @@ import {
   RiDoorOpenLine,
   RiSendPlaneLine,
 } from "react-icons/ri";
-import Calendario from "@/components/calendar/Calendario";
+import Calendario from "@/components/calendar/Calendar";
 
 const TODAY = new Date(2026, 6, 24);
 

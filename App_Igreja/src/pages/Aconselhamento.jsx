@@ -136,7 +136,7 @@ export default function Aconselhamento() {
             Aconselhamentos
           </h2>
           <p className="text-xs text-gray-400 mt-0.5">
-            {counseling.length} solicitação(ões) · {pending.length} pendente(s)
+            {counseling.length} solicitações · {pending.length} pendente(s)
           </p>
         </div>
         <button
